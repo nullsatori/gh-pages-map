@@ -1,0 +1,249 @@
+$green: #b6f353;
+$dark__grey: #7f7f7f;
+$grey: #a9a9a9;
+$orange: #ffc000;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background: #ececec;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  a {
+    background: red;
+    color: white;
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+#partners {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  svg {
+    width: 100%;
+    margin-top: 2%;
+  }
+  path {
+    transition: all 0.5s;
+    fill: $grey;
+    stroke: white;
+  }
+  #RU-NVS,
+  #RU-SVE,
+  #RU-CHE,
+  #RU-LEN,
+  #RU-TA {
+    fill: $orange;
+  }
+}
+#main__map > .circle {
+  position: absolute;
+  z-index: 2;
+  &:nth-child(-n + 20) {
+    background: #687473;
+    color: white;
+  }
+  &:nth-child(1) {
+    top: 620px;
+    right: 1130px;
+  }
+  &:nth-child(2) {
+    top: 500px;
+    left: 600px;
+  }
+  &:nth-child(3) {
+    top: 533px;
+    left: 575px;
+  }
+  &:nth-child(4) {
+    top: 290px;
+    left: 405px;
+  }
+  &:nth-child(5) {
+    top: 475px;
+    left: 485px;
+  }
+  &:nth-child(6) {
+    top: 510px;
+    left: 465px;
+  }
+  &:nth-child(7) {
+    top: 618px;
+    right: 1085px;
+  }
+  &:nth-child(8) {
+    top: 550px;
+    left: 650px;
+  }
+  &:nth-child(9) {
+    top: 600px;
+    left: 880px;
+  }
+  &:nth-child(10) {
+    top: 435px;
+    left: 450px;
+  }
+  &:nth-child(11) {
+    top: 380px;
+    left: 1150px;
+  }
+  &:nth-child(12) {
+    top: 450px;
+    left: 570px;
+  }
+  &:nth-child(13) {
+    top: 780px;
+    left: 1310px;
+  }
+  &:nth-child(14) {
+    top: 480px;
+    right: 1210px;
+  }
+  &:nth-child(15) {
+    top: 570px;
+    right: 1100px;
+  }
+  &:nth-child(16) {
+    top: 460px;
+    left: 430px;
+  }
+  &:nth-child(17) {
+    top: 650px;
+    left: 980px;
+  }
+  &:nth-child(18) {
+    top: 395px;
+    left: 440px;
+  }
+  &:nth-child(19) {
+    top: 520px;
+    left: 330px;
+  }
+  &:nth-child(20) {
+    top: 460px;
+    left: 390px;
+  }
+}
+#main__map {
+  svg {
+    width: 100%;
+    margin-top: 2%;
+  }
+  path {
+    transition: all 0.5s;
+    fill: $grey;
+    stroke: rgba(0, 0, 0, 0.5);
+  }
+  #RU-SAK,
+  #RU-KHA,
+  #RU-ARK,
+  #RU-MUR,
+  #RU-NGR,
+  #RU-TVE,
+  #RU-PNZ,
+  #RU-VOR,
+  #RU-AST,
+  #RU-SE,
+  #RU-BA,
+  #RU-UD {
+    fill: $dark__grey;
+  }
+  #RU-SA,
+  #RU-PRI,
+  #RU-KYA,
+  #RU-IRK,
+  #RU-KYA,
+  #RU-TOM,
+  #RU-NVS,
+  #RU-KEM,
+  #RU-KHM,
+  #RU-TYU,
+  #RU-SVE,
+  #RU-PER,
+  #RU-CHE,
+  #RU-ROS,
+  #RU-LEN,
+  #RU-TA,
+  #RU-MO,
+  #RU-NIZ,
+  #RU-IVA,
+  #RU-TAM,
+  #RU-SAM {
+    fill: $green;
+    &:hover {
+      fill: red;
+    }
+  }
+  .modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    left: 2%;
+    .filler {
+      width: 100%;
+      z-index: 2;
+    }
+    .modal__menu {
+      border: 2px solid $green;
+      background: white;
+      z-index: 2;
+      width: 400px;
+    }
+    .modal__circle {
+    }
+  }
+  #side__menu {
+    position: absolute;
+    border: 2px solid black;
+    z-index: 3;
+    cursor: default;
+    user-select: none;
+    p {
+      writing-mode: vertical-lr;
+      transform: scale(-1, -1);
+      margin: 0;
+    }
+  }
+  .Map {
+    position: absolute;
+    z-index: 1;
+    path {
+      stroke: white;
+    }
+  }
+
+  .circle,
+  .modal__circle {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    text-align: center;
+    font: 15px 'Segoe UI';
+    font-weight: 500;
+    cursor: default;
+    pointer-events: none;
+  }
+}
